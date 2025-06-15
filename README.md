@@ -65,16 +65,16 @@ Note import should always be last line.
 
 Set up test HTML code
 
-`<body>`
-  
-  `<div class="bg-primary">`
-    `Test Default Blue`
-  `</div>`
-  `<div class="bg-secondary">`
-    `Test Default Gray`
-  `</div>`
-  
-`</body>`
+```
+<body>
+  <div class="bg-primary">
+    Test Default Blue
+  </div>
+  <div class="bg-secondary">
+    Test Default Gray
+  </div>
+</body>
+```
 
 Add to beginning of custom.scss file
 
