@@ -65,16 +65,16 @@ Note import should always be last line.
 
 Set up test HTML code
 
-<body>
+`<body>`
   
-  <div class="bg-primary">
-    Test Default Blue
-  </div>
-  <div class="bg-secondary">
-    Test Default Gray
-  </div>
+  `<div class="bg-primary">`
+    `Test Default Blue`
+  `</div>`
+  `<div class="bg-secondary">`
+    `Test Default Gray`
+  `</div>`
   
-</body>
+`</body>`
 
 Add to beginning of custom.scss file
 
@@ -98,6 +98,3 @@ to
 After every edit of custom.scss, above Bash command must be entered.
 
 The HTML file should show blue and gray divs before entering the above Bash command, aqua and red divs afterwards.  If not, debug.
-
-
-
