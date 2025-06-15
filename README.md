@@ -48,8 +48,10 @@ npm install -g sass
 
 Entered in HTML head
 
-`<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">`
-`<link rel="stylesheet" href="customsass.css">`
+```
+<link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="customsass.css">
+```
 
 Created custom_scss folder in repository folder.
 Created custom.scss in custom_scss folder.
