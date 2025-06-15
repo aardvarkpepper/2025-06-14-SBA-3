@@ -10,6 +10,7 @@
 
 .xframenarrow {
   background-color: yellow;
+  margin: 71px 24px;
 }
 
 @media (max-width: 1199px) {
@@ -19,6 +20,9 @@
 }
 
 @media(min-width: 1200px) {
+  .xcontainer {
+    height: 100vh;
+  }
   .xframenarrow {
     display: none;
   }
