@@ -20,6 +20,13 @@
   background-color: hsla(263, 55%, 52%);
   width: 540px;
   height: 282px;
+  position: relative;
+}
+.xcard1graphic {
+  position: absolute;
+  top: 0px;
+  left: 349px;
+  z-index: 1;
 }
 .xcardtitlebar {
   display: flex;
@@ -64,6 +71,8 @@
   margin-top: 18px;
   margin-left: 30px;
   margin-right: 30px;
+  position: relative;
+  z-index: 2;
 }
 .xcardquote{
   font-size: 13px;
