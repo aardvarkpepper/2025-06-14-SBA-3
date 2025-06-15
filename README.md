@@ -78,6 +78,8 @@ Set up test HTML code
 </body>
 ```
 
+View to verify first div is blue, second div is gray.
+
 Add to beginning of custom.scss file
 
 $primary: teal;
