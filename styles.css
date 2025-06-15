@@ -1,0 +1,25 @@
+.xbody {
+  background-color: red;
+}
+
+.xframewide {
+  width: 1110px;
+  height: 572px;
+  background-color: orange;
+}
+
+.xframenarrow {
+  background-color: yellow;
+}
+
+@media (max-width: 1199px) {
+  .xframewide {
+    display: none;
+  }
+}
+
+@media(min-width: 1200px) {
+  .xframenarrow {
+    display: none;
+  }
+}
