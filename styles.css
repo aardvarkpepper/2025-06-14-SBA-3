@@ -7,7 +7,41 @@
   width: 1110px;
   height: 572px;
   background-color: orange;
+  display: flex;
+  flex-direction: row;
 }
+.xfwcol1 {
+  display: flex;
+  flex-direction: column;
+  width: 825px;
+  height: 572px;
+  background-color: aquamarine;
+}
+.xfwcol2 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  width: 255px;
+  height: 572px;
+  background-color: pink;
+}
+.xfwc1row1 {
+  display: flex;
+  flex-direction: column;
+  width: 825px;
+  height: 282px;
+  background-color: green;
+}
+.xfwc1row2 {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  width: 825px;
+  height: 266px;
+  background-color: blue;
+}
+
+
 .xframenarrow {
   background-color: yellow;
   margin: 71px 24px;
