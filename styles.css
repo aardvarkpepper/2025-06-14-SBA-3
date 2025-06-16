@@ -158,11 +158,35 @@
   height: 444px;
   position: relative;
 }
-.xcardagraphic {
+.ycard1graphic {
   position: absolute;
   top: 0px;
   left: 199px;
   z-index: 1;
+}
+.ycard2 {
+  margin-top: 24px;
+  background-color: hsla(217, 19%, 35%, 1);
+  width: 327px;
+  height: 240px;
+}
+.ycard3 {
+  margin-top: 24px;
+  background-color: hsla(0, 0%, 100%, 1);
+  width: 327px;
+  height: 222px;
+}
+.ycard4 {
+  margin-top: 24px;
+  background-color: hsla(219, 29%, 14%, 1);
+  width: 327px;
+  height: 384px;
+}
+.ycard5 {
+  margin-top: 24px;
+  background-color: hsla(0, 0%, 100%, 1);
+  width: 327px;
+  height: 438px;
 }
 .ycardtitletext {
   margin-left: 14px;
@@ -184,7 +208,7 @@
   color: hsla(0, 0%, 100%, 0.5);
 }
 .ycardexcerpt{
-  font-size: 21px;
+  font-size: 20px;
   font-weight: 500;
   color: hsla(0, 0%, 100%);
   line-height: 23px;
@@ -196,7 +220,7 @@
 }
 .ycardquote{
   font-size: 14px;
-  line-height: 19px;
+  line-height: 17px;
   font-weight: 500;
   color: hsla(0, 0%, 100%, 0.7);
   margin-top: 18px;
@@ -214,7 +238,7 @@
   .xcontainer {
     height: 100vh;
   }
-  .xframenarrow {
+  .yframenarrow {
     display: none;
   }
 }
