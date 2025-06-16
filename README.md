@@ -14,21 +14,56 @@ Obviously Voltaire was a big fan of Bootstrap.
 
 >In this assessment, you will take a Figma design from Frontend Mentor and implement it using Bootstrap. This project simulates a real-world task where you receive a design handoff and are expected to create a responsive, pixel-perfect webpage. You will apply your knowledge of Bootstrap’s grid system, components, and utility classes while utilizing version control through Git.
 
-[Frontend Mentor Link to Testimonials Grid Section Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
+*Deviations from the design, even intentional, will be considered incorrect, and points deducted.*
+*Add any custom CSS needed to achieve the required design fidelity.*
 
-The assignment states pixel-perfect so generic Bootstrap clearly does not suit.  We are instructed to use components "where appropriate".  It is not appropriate.
+[Frontend Mentor Link to Testimonials Grid Section Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 
 >2. Bootstrap Implementation . . . Include Bootstrap components like cards, buttons, navbars, or accordions where appropriate.
 
-[Click to see Bootstrap documentation on cards](https://getbootstrap.com/docs/5.3/components/card/) does not state specifically what each card class changes.  This is fine and expected for Bootstrap's expected use case of building fast but limited websites, but no good for this assignment use case of "pixel perfect".  *We are allowed discretion, and I'm using it.  There are loads of associated Bootstrap classes none of which are well documented, I'm not spending hours going through generated code to change behaviors with SASS, in the process breaking Bootstrap's original functionalities, then hunting down all the issues the changes create, in the end leaving Bootstrap's original card classes and every class affected by changes broken.  Extensive changes to Bootstrap classes is completely besides the point of Bootstrap supposedly making things fast and simple.*
+[Click to see Bootstrap documentation on cards](https://getbootstrap.com/docs/5.3/components/card/) *We are allowed discretion, and I'm using it.  There are loads of associated Bootstrap classes none of which are well documented, I'm not spending hours going through generated code to change behaviors with SASS, in the process breaking Bootstrap's original functionalities, then hunting down emergent behavior, in the end leaving Bootstrap's original functionality in shambles.  Extensive changes to Bootstrap classes is completely besides the point of Bootstrap supposedly making things fast and simple.*
 
-Among other Bootstrap/pixel perfect/good coding practice conflicts that may be expected, detailed in later sections, a pro account was required to download Figma files off Frontend Mentor.  We could download other files; I moved some of them into Figma and worked with them to get pixel sizes.
+## Description of Approach
+
+I read through the assignment, noted "pixel perfect" requirement and that we were allowed to use our own CSS.  I then thought about how to approach the problem.
+
+As I understand it, Bootstrap has a lot of predefined code that's useful for fast builds with limited flexibility.  It's useful for, say, webpages that want to fit ever-changing content into familiar formats, where components may change in size, be added or removed, according to some general rules.  This is quite different to building pixel-perfect adaptations of design specifications that were not created with Bootstrap's limitations firmly in mind.
+
+Bootstrap features a limited number of predefined variables that cannot be increased in number, and changed only with some small difficulty.  Measurements are made in increments of fixed values, further restricting flexibility in meeting elaborate design specifications.
+
+As part of Bootstrap's core utility is speed and a framework many developers may be familiar with, I thought spending excessive time on workarounds creating hard-to-read code and breaking a lot of Bootstrap's normal behavior would be quite besides the point.  I did use SASS to effectively redefine some Bootstrap classes, to meet assignment requirements, and I did use Bootsrap's grid system to some limited degree.  For the rest, I just used CSS and Google Fonts.
+
+I first considered structure; what components I would place in what components and so forth.  Even if not strictly necessary for this assignment, building components that could be re-used is pretty standard.  However, the wide frame really didn't allow for free movement of components, and it seemed clear the design was a 'one-off', at least for the wide frame.
+
+With the wide frame, Each card seemed to be fairly filled with pictures and text to the margin, which argues for dynamic design.  But cards were laid out in a complicated pattern, with uniform distances between them, with the cards being different sizes (540x282, 255x282, 255x266, 540x266, 255x572), with text elements looking the same size compared between components (no text resizing or graphics added to cards to fill out space).
+
+[Link to Figma file I used for this assignment.](https://www.figma.com/design/IiEnTAxpMNPVszV11R28VE/SBA-3?node-id=0-1&t=i7L8XBdx3mNSNTln-1)
+
+## Challenges
+
+The biggest issue for me was hunting down bugs, often caused by my bad class naming practices resulting from my insufficient conceptualization.  For example, I would call things "column", when they were "rows", or I would label generic components with "x" or "y" rather than having strict naming conventions.  Had some issue with VSCode autoformat splitting long lines of text into separate lines.  Some organization issues from divs within divs; hunting down typos inclding missed or extra tags entered by accident was a bother.
+
+After realizing VSCode was auto-splitting long lines of text, I briefly looked up how to fix it, but did not find a quick fix I could implement.  As the core functions of the code were not affected, I left VSCode settings alone for expedience, and did a final single HTML edit at the end to reunite split lines of code.
+
+I worked with div soup by using empty lines as break points, and HTML comments to state where specific components ended.
+
+Frontend Mentor did not allow access to Figma file without a paid account.  We were able to download design specifications and assets; I took .jpg files and put in Figma, drew shapes and lines to get pixel sizes etc. (e.g. corner rounding specifications).
+
+Late in the process I thought simple visual comparison inadequate, so took screenshots of website, copied into Figma, and applied 30% opacity to use as an overlay.
+
+I encountered some unexpected behaviors in Bootstrap (e.g. not being able to redefine 'muted' as I'd done with other redefinitions in SASS, and possibly Bootstrap classes taking precedence over classes implemented in CSS, causing an intended display: none element to render.)  These were only minor inconveniences, as I'd implemented then tested features step by step, so I was easily able to get things back to a working point then go from there.
 
 ## Reflection
 
 Bootstrap should not be used for pixel-perfect projects, unless those project specifications coincide exactly with Bootstrap's presets.  The assignment explicitly mentioned multiple times the importance of "pixel perfect", so I used SASS enough that it would have been far simpler and easier to ignore Bootstrap and use regular CSS instead.  I did use Bootstrap wherever possible, to meet assignment requirements.
 
-I would not make "improvements" given more time.  Bootstrap is suited to building quick projects where its limitations are kept firmly in mind, with minimal use of SASS and/or !important.  Building pixel perfect projects with design specifications not created with Bootstrap in mind is entirely besides the point of using Bootstrap in the first place.
+Most challenges I faced during the assignment, I think will be addressed with more experience - better conceptualization of naming practices and element roles.  Absent any major encountered issues, two challenges I thought an issue even if indirectly -
+
+First, I don't know what alternate implementations may be better.  I don't know what I don't know; possibly some action I discounted might have been best, or something I've never heard of.
+
+Second, I think I need to figure out some way of communication with others in the class.  Though I was satisfied with my personal progress, I think others will have questions, which they are reluctant to share.  I think I cannot reasonably be responsible for others' actions or lack of action, but I'll have to keep mindful of ways to encourage reaching out.
+
+I would not make improvements to the work I did on the assignment given more time.  Bootstrap is suited to building quick projects where its limitations are kept firmly in mind, with minimal use of SASS and/or !important.  Building pixel perfect projects with design specifications not created with Bootstrap in mind is, I think, besides the point of using Bootstrap in the first place.
 
 ## References
 
@@ -137,7 +172,7 @@ So I implement a single column using Bootstrap's grid system and use media queri
 
 I could not use SASS to overwrite 'muted' to apply to Bootstrap's 'text-muted' class.  'Muted' may reference another color as a baseline.
 
-Using Bootstrap "d-flex flex-row" and commenting out my 'xframewide' references to display: flex; and flex-direction: row; caused the wide frame to be visible in smaller screen sizes.  Though I left the HTML element with the xframewide class, it seems the media query switching .xframewide to display: none may have been invalidated.
+Using Bootstrap "d-flex flex-row" and commenting out my 'xframewide' references to display: flex; and flex-direction: row; caused the wide frame to be visible in smaller screen sizes.  Though I left the HTML element with the xframewide class, it seems the media query switching .xframewide to display: none may have been invalidated.  Probably has something to do with HTML classes taking precedence over CSS rules, or Bootstrap classes taking precedence, or ordering of stylesheet references in the HTML head.  Regardless, reverted to remove Bootstrap classes.
 
 ```
 @media (max-width: 1199px) {
@@ -146,39 +181,10 @@ Using Bootstrap "d-flex flex-row" and commenting out my 'xframewide' references 
   }
 }
 ```
-
+Did not implement Bootstrap margin or padding classes in place of px references.  [Follow link to Bootstrap spacing documentation.](https://getbootstrap.com/docs/4.0/utilities/spacing/)  $spacer seems to be linked to rem, which is dependent on the font size of the root element - though set at 16, user preferences may that unit of measurement, which would affect spacer, which would affect margins.  Besides, as often the case in Bootstrap, fixed increments had to be used, and pixel measurements often weren't in accord with those fixed increments.  Rather than elaborate workarounds or inconsistent code, I decided to stick with px measurements.
 
 
 ## Resources
 
 https://www.youtube.com/watch?v=kCvGE9sTj7c
 https://convertcolorcode.com/hsla-to-hex
-
-
-<!--/xframenarrow-->
-
-
-
-
-        ### Neutral
-
-        Light gray: hsla(0, 0%, 81%, 1);
-        Light grayish blue: hsl(210, 46%, 95%)
-
-        Note for text colors:
-
-        1. "Verified Graduate" has the same color as the person's name with 50% opacity
-        2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity
-
-        ## Typography
-
-        ### Body Copy
-
-        - Font size: 13px
-
-        ### Font
-
-        - Family: [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed)
-        - Weights: 500, 600 -->
-
-        sass custom_scss/custom.scss:custom_bootstrap.css
