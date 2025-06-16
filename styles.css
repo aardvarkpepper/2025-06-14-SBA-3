@@ -67,6 +67,11 @@
   width: 540px;
   height: 266px;
 }
+.xcard5 {
+  background-color: hsla(0, 0%, 100%, 1);
+  width: 255px;
+  height: 572px;
+}
 .xcard1graphic {
   position: absolute;
   top: 0px;
